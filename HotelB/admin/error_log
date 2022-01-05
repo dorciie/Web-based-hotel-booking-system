@@ -1,10 +1,10 @@
-[23-Nov-2014 13:42:17 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
-[23-Nov-2014 13:44:26 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
-[23-Nov-2014 13:44:32 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
-[23-Nov-2014 13:47:23 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
-[23-Nov-2014 13:47:25 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
-[23-Nov-2014 13:47:33 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
-[23-Nov-2014 13:47:50 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
+[23-Nov-2014 13:42:17 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
+[23-Nov-2014 13:44:26 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
+[23-Nov-2014 13:44:32 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
+[23-Nov-2014 13:47:23 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
+[23-Nov-2014 13:47:25 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
+[23-Nov-2014 13:47:33 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
+[23-Nov-2014 13:47:50 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 8
 [23-Nov-2014 13:49:12 Asia/Kuala_Lumpur] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/unleashe/public_html/hotel/admin/deleteroom.php:20) in /home/unleashe/public_html/hotel/admin/deleteroom.php on line 21
 [23-Nov-2014 13:50:17 Asia/Kuala_Lumpur] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/unleashe/public_html/hotel/admin/deleteroom.php:20) in /home/unleashe/public_html/hotel/admin/deleteroom.php on line 21
 [23-Nov-2014 13:50:18 Asia/Kuala_Lumpur] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/unleashe/public_html/hotel/admin/deleteroom.php:20) in /home/unleashe/public_html/hotel/admin/deleteroom.php on line 21
@@ -53,14 +53,14 @@
 [30-Nov-2014 14:03:26 Asia/Kuala_Lumpur] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/unleashe/public_html/hotel/admin/updateroom.php:48) in /home/unleashe/public_html/hotel/admin/updateroom.php on line 51
 [30-Nov-2014 14:03:48 Asia/Kuala_Lumpur] PHP Warning:  getimagesize(midhat.jpg): failed to open stream: No such file or directory in /home/unleashe/public_html/hotel/admin/updateroom.php on line 48
 [30-Nov-2014 14:03:48 Asia/Kuala_Lumpur] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/unleashe/public_html/hotel/admin/updateroom.php:48) in /home/unleashe/public_html/hotel/admin/updateroom.php on line 51
-[05-Dec-2014 02:01:40 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 7
-[05-Dec-2014 02:03:01 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 7
-[05-Dec-2014 02:03:21 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 7
-[05-Dec-2014 02:03:25 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 7
-[05-Dec-2014 02:17:43 Asia/Kuala_Lumpur] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/detail.php on line 145
-[05-Dec-2014 02:18:36 Asia/Kuala_Lumpur] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/detail.php on line 146
-[05-Dec-2014 02:18:50 Asia/Kuala_Lumpur] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/detail.php on line 146
-[05-Dec-2014 02:21:58 Asia/Kuala_Lumpur] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/search.php on line 36
-[05-Dec-2014 02:22:02 Asia/Kuala_Lumpur] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/search.php on line 36
-[05-Dec-2014 02:22:34 Asia/Kuala_Lumpur] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/search.php on line 36
-[05-Dec-2014 02:25:22 Asia/Kuala_Lumpur] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/search.php on line 36
+[05-Dec-2014 02:01:40 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 7
+[05-Dec-2014 02:03:01 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 7
+[05-Dec-2014 02:03:21 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 7
+[05-Dec-2014 02:03:25 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/admin/auth.php on line 7
+[05-Dec-2014 02:17:43 Asia/Kuala_Lumpur] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/detail.php on line 145
+[05-Dec-2014 02:18:36 Asia/Kuala_Lumpur] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/detail.php on line 146
+[05-Dec-2014 02:18:50 Asia/Kuala_Lumpur] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/detail.php on line 146
+[05-Dec-2014 02:21:58 Asia/Kuala_Lumpur] PHP Warning:  mysqli_num_rows() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/search.php on line 36
+[05-Dec-2014 02:22:02 Asia/Kuala_Lumpur] PHP Warning:  mysqli_num_rows() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/search.php on line 36
+[05-Dec-2014 02:22:34 Asia/Kuala_Lumpur] PHP Warning:  mysqli_num_rows() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/search.php on line 36
+[05-Dec-2014 02:25:22 Asia/Kuala_Lumpur] PHP Warning:  mysqli_num_rows() expects parameter 1 to be resource, boolean given in /home/unleashe/public_html/hotel/admin/search.php on line 36

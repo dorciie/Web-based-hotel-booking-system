@@ -1,26 +1,22 @@
 <?php
 session_start();
 
-include './auth.php';
-$re = mysql_query("select * from user where username = '".$_SESSION['username']."'  AND password = '".$_SESSION['password']."' " );
-echo mysql_error();
-if(mysql_num_rows($re) > 0)
-{
+include __DIR__ . '/auth.php';
+$re = mysqli_query($dbhandle, "select * from user where username = '" . $_SESSION['username'] . "'  AND password = '" . $_SESSION['password'] . "' ");
+echo mysqli_error($dbhandle);
+if (mysqli_num_rows($re) > 0) {
+} else {
 
-} 
-else
-{
-
-session_destroy();
-header("location: index.htm");
+    session_destroy();
+    header("location: index.htm");
 }
 
 $id = $_GET['booking'];
 
-$sql = "DELETE FROM booking WHERE booking_id=".$id."";
-$result = mysql_query($sql);
-$sql = "DELETE FROM roombook WHERE booking_id=".$id."";
-$result = mysql_query($sql);
+$sql = "DELETE FROM booking WHERE booking_id=" . $id . "";
+$result = mysqli_query($dbhandle, $sql);
+$sql = "DELETE FROM roombook WHERE booking_id=" . $id . "";
+$result = mysqli_query($dbhandle, $sql);
 
 header('Refresh: 2;url=dashboard.php');
 echo "<!DOCTYPE html>\n";
@@ -50,5 +46,3 @@ echo "</div>\n";
 echo "\n";
 echo "\n";
 echo "</body></html>";
-
-?>

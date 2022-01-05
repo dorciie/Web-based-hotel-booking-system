@@ -1,23 +1,19 @@
 <?php
 session_start();
-include './auth.php';
-$re = mysql_query("select * from user where username = '".$_SESSION['username']."'  AND password = '".$_SESSION['password']."' " );
-echo mysql_error();
-if(mysql_num_rows($re) > 0)
-{
+include __DIR__ . '/auth.php';
+$re = mysqli_query($dbhandle, "select * from user where username = '" . $_SESSION['username'] . "'  AND password = '" . $_SESSION['password'] . "' ");
+echo mysqli_error($dbhandle);
+if (mysqli_num_rows($re) > 0) {
+} else {
 
-} 
-else
-{
-
-session_destroy();
-header("location: index.htm");
+    session_destroy();
+    header("location: index.htm");
 }
 
 $room_id = $_GET['room_id'];
-include './auth.php';
-$sql = "DELETE FROM room WHERE room_id=".$room_id."";
-$result = mysql_query($sql);
+include __DIR__ . '/auth.php';
+$sql = "DELETE FROM room WHERE room_id=" . $room_id . "";
+$result = mysqli_query($dbhandle, $sql);
 
 header('Refresh: 2; url=room.php');
 echo "<!DOCTYPE html>\n";
@@ -47,4 +43,3 @@ echo "</div>\n";
 echo "\n";
 echo "\n";
 echo "</body></html>";
-?>
