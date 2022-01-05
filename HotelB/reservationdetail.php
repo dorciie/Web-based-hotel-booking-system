@@ -31,7 +31,7 @@ $_SESSION["totalchild"] = $_POST['totalchild'];
 		<form>
 		  <div class="row">
 			<div class="large-6 columns">
-				<p>First Name : <b><?php  if (isset($_POST['fname'])){$name = $_POST['fname'];}else{$name='';}   echo $_POST['fname']; ?></b></p>
+				<p>First Name : <b><?php  $name = $_POST['fname'] ?? '';   echo $_POST['fname']; ?></b></p>
 			</div>
 			<div class="large-6 columns">
 				<p>Last  Name : <b><?php echo $_POST['lname']; ?></b></p>

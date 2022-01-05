@@ -1,8 +1,8 @@
-[19-Nov-2014 03:16:22 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
-[19-Nov-2014 03:24:12 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
-[19-Nov-2014 03:24:55 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
-[19-Nov-2014 03:26:14 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
-[19-Nov-2014 03:28:07 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
+[19-Nov-2014 03:16:22 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
+[19-Nov-2014 03:24:12 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
+[19-Nov-2014 03:24:55 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
+[19-Nov-2014 03:26:14 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
+[19-Nov-2014 03:28:07 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
 [19-Nov-2014 13:05:22 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected '.' in /home/unleashe/public_html/hotel/reservationcomplete.php on line 249
 [19-Nov-2014 13:06:58 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected '.' in /home/unleashe/public_html/hotel/reservationcomplete.php on line 249
 [19-Nov-2014 13:07:09 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected '.' in /home/unleashe/public_html/hotel/reservationcomplete.php on line 249
@@ -14,11 +14,11 @@
 [19-Nov-2014 13:14:12 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected ';' in /home/unleashe/public_html/hotel/reservationcomplete.php on line 257
 [19-Nov-2014 13:14:25 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected ';' in /home/unleashe/public_html/hotel/reservationcomplete.php on line 257
 [19-Nov-2014 13:14:27 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected ';' in /home/unleashe/public_html/hotel/reservationcomplete.php on line 257
-[23-Nov-2014 14:12:23 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 8
-[23-Nov-2014 14:12:51 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 8
+[23-Nov-2014 14:12:23 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 8
+[23-Nov-2014 14:12:51 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 8
 [23-Nov-2014 14:44:16 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected 'firstname' (T_STRING) in /home/unleashe/public_html/hotel/insertandemail.php on line 39
-[04-Dec-2014 13:54:54 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
-[04-Dec-2014 13:55:19 Asia/Kuala_Lumpur] PHP Warning:  mysql_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
+[04-Dec-2014 13:54:54 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
+[04-Dec-2014 13:55:19 Asia/Kuala_Lumpur] PHP Warning:  mysqli_connect(): Access denied for user 'unleashe_hotel'@'localhost' (using password: YES) in /home/unleashe/public_html/hotel/auth.php on line 7
 [04-Dec-2014 14:43:35 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE) in /home/unleashe/public_html/hotel/insertandemail.php on line 350
 [04-Dec-2014 16:34:41 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected '{' in /home/unleashe/public_html/hotel/paydeposit.php on line 12
 [04-Dec-2014 16:35:00 Asia/Kuala_Lumpur] PHP Parse error:  syntax error, unexpected '{' in /home/unleashe/public_html/hotel/paydeposit.php on line 12
