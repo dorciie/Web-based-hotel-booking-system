@@ -10,6 +10,7 @@ if (isset($_POST["checkin"]) && !empty($_POST["checkin"]) && isset($_POST["check
 	$_SESSION['checkin_unformat'] = $_POST["checkin"];
 	$_SESSION['checkout_unformat'] = $_POST["checkout"];
 	$_SESSION['interval'] = $_SESSION['datetime1']->diff($_SESSION['datetime2']);
+	$_SESSION['district'] = $_POST['district'];
 
 	$_SESSION['total_night'] = $_SESSION['interval']->format('%d');
 }
@@ -138,15 +139,60 @@ if (isset($_POST["totalchildrens"])) {
 								<div class="large-4 columns" style="max-width:100%;">
 									<span class="">: <?php echo  $_SESSION['total_night']; ?>
 									</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-6 columns" style="max-width:100%;">
+									<span class="fontgrey" style="font-size:13.2px;">District
+									</span>
+								</div>
 
+								<div class="large-4 columns" style="max-width:100%;">
+									<span class="">: <?php echo  $_SESSION['district']; ?>
+									</span>
 								</div>
 							</div>
 
 						</div>
 					</div>
 
+					</br>
+					<?php require 'casesData.php'; 
+				$cases_by_district = null;
+				
 
+				if(isset($district_FINAL[$_SESSION['district']])){
+					$cases_by_district = $district_FINAL[$_SESSION['district']];
+				}
 
+				$colour = "";
+				$zone = "";
+				if($cases_by_district < 1 || $cases_by_district == null){
+					$colour = "#278511";
+					$zone = "Green Zone";
+				}
+				elseif($cases_by_district < 21){
+					$colour = "#FDDA0D";
+					$zone = "Yellow Zone";	
+				}
+				elseif($cases_by_district < 41){
+					$colour = "#ff9800";
+					$zone = "Orange Zone";
+				}
+				else{
+					$colour = "#f44336";
+					$zone = "Red Zone";
+				}
+
+				?>
+					<div class="card" style="background-color:<?php echo $colour ?>">
+					 	<div class="card-body" style="padding: 20px; text-align:center; font-size:30px; ">
+						 <?php echo $zone ?>
+					 	</div>
+					</div>
+				
+
+				
 					<div class="row">
 						<div class="large-12 columns">
 							<br><button name="submit" href="#" class="button small fontslabo" style="background-color:#2ecc71; width:100%;">Edit Reservation</button>
@@ -304,6 +350,7 @@ if (isset($_POST["totalchildrens"])) {
 				print "	</form>";
 
 				?>
+				
 			</div>
 
 

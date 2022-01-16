@@ -1,6 +1,10 @@
 <?php
 session_start();
 ?>
+<?php 
+	include __DIR__ . '/auth.php';
+	//$result = mysqli_query($dbhandle, "SELECT district_name, state_name FROM district ORDER BY state_name");
+?>
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,9 +123,30 @@ session_start();
 							</select>
 						</label>
 					</div>
-					
-				
 			</div>
+
+					<div class="row">
+            			<div class="large-12 columns">
+							<label class="fontcolor">District
+									<select  name="district" id="district" style="width:100%;">
+									<?php 
+										$result = mysqli_query($dbhandle, "SELECT district_name, state_name FROM district ORDER BY state_name");
+										// echo $result;
+										if (mysqli_num_rows($result) > 0) {
+											while ($row = mysqli_fetch_array($result)) {
+												// echo $row['district_name'];
+
+												//?>
+
+										<option value="<?php echo $row['district_name']; ?>"><?php echo  $row['state_name']." - ".$row['district_name']; ?></option>
+										<?php
+											}}
+											?> 
+									</select>
+							</label>
+                    	</div>
+			</div>
+	
 			
 			  <div class="row">
 				<div class="large-12 columns" >

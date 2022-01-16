@@ -121,6 +121,8 @@ for ($i = 0; $i < count($district_cases_active); $i++) {
     }
 }
 
+
+
 // $cases_malaysia = [];
 
 // $details = [
@@ -156,4 +158,4 @@ for ($i = 0; $i < count($district_cases_active); $i++) {
  */
 $cases_by_district = json_encode($district_FINAL, JSON_PRETTY_PRINT);
 
-echo $cases_by_district;
+//echo $cases_by_district;
