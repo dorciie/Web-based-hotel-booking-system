@@ -1,6 +1,6 @@
 <?php
-$username = "root";
-$password = "";
+$username = "unleashe_hotel";
+$password = "unleashe_hotel";
 $hostname = "localhost"; 
 
 //connection to the database
