@@ -190,6 +190,13 @@ if (isset($_POST["totalchildrens"])) {
 						 <?php echo $zone ?>
 					 	</div>
 					</div>
+
+					<?php require 'riskStatus.php';
+					echo "<br>";
+					echo round($risk, 2) ."%<br>";
+					echo round($risk, 0) ." out of 100 people are at risk of getting COVID";
+					?>
+					
 				
 
 				
