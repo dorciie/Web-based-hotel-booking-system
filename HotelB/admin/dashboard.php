@@ -139,7 +139,7 @@ if (mysqli_num_rows($re) > 0) {
 				<ul class="nav nav-sidebar">
 					<li class="active"><a href="dashboard.php"><i class="icon-gauge"></i> Dashboard <span class="sr-only">(current)</span></a></li>
 
-					<li><a href="room.php"><i class="icon-key"></i> Rooms</a></li>
+					<li><a href="hotellist.php"><i class="icon-key"></i> Hotels</a></li>
 
 					<li><a href="http://www.hotel.gamboh.com.my"><i class="icon-share"></i> Booking Page</a></li>
 				</ul>
@@ -302,6 +302,7 @@ if (mysqli_num_rows($re) > 0) {
 											<th>Booking No.</th>
 											<th>Check In</th>
 											<th>Check Out</th>
+											<th>Hotel</th>
 											<th>Room</th>
 											<th>Guests</th>
 											<th>Total Amount</th>
@@ -330,6 +331,7 @@ if (mysqli_num_rows($re) > 0) {
 											<th>Booking No.</th>
 											<th>Check In</th>
 											<th>Check Out</th>
+											<th>Hotel</th>
 											<th>Room</th>
 											<th>Guests</th>
 											<th>Total Amount</th>
@@ -341,6 +343,8 @@ if (mysqli_num_rows($re) > 0) {
 									<tbody id="info0">
 										<?php include __DIR__ . '/auth.php';
 										$re = mysqli_query($dbhandle, "select booking.* from booking WHERE DATEDIFF(NOW(), booking_date) <= 7 ;");
+										$re1 = mysqli_query($dbhandle, "select booking.room_id, room.room_id FROM hotel INNER JOIN room ON hotel.room_id=room.room_id;");
+										$re2 = mysqli_query($dbhandle, "select booking.* from booking WHERE DATEDIFF(NOW(), booking_date) <= 7 ;");
 										if (mysqli_num_rows($re) > 0) {
 											while ($row = mysqli_fetch_array($re)) {
 

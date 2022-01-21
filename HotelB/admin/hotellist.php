@@ -115,36 +115,30 @@ if (mysqli_num_rows($re) > 0) {
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="roomdetail">
 
 
-				<h2 class="sub-header">Room Details</h2>
+				<h2 class="sub-header">Hotels</h2>
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th>Room Name</th>
-								<th>Thumbnail</th>
-								<th>Total Room</th>
-								<th>Size</th>
-								<th>View</th>
-								<th>Occupancy</th>
-								<th>Rate</th>
-								<th>Description</th>
+								<th>Hotel Name</th>
+								<th>District</th>
+                                <th>State</th>
+								<th>Address</th>
 							</tr>
 						</thead>
 						<tbody id="roominfo">
 							<?php
 							include __DIR__ . '/auth.php';
-							$result = mysqli_query($dbhandle, "select * from room");
+							$result = mysqli_query($dbhandle, "select * from hotel");
+                            $result2 = mysqli_query($dbhandle, "select hotel.district_id, district.state_name, district.district_name FROM hotel INNER JOIN district ON hotel.district_id=district.district_id;");
 							if (mysqli_num_rows($result) > 0) {
+                                $row2 = mysqli_fetch_array($result2);
 								while ($row = mysqli_fetch_array($result)) {
-									print "<tr style=\"\">		 <td>" . $row['room_name'] . "</td>\n";
-									print "                  <td><img src=\"../" . $row['imgpath'] . "\" style=\"height:50px;width:50px;\"\"></td>\n";
-									print "                  <td>" . $row['total_room'] . "</td>\n";
-									print "                  <td>" . $row['size'] . " </td>\n";
-									print "                  <td>" . $row['view'] . "</td>\n";
-									print "                  <td>" . $row['occupancy'] . "</td>\n";
-									print "                  <td>" . $row['rate'] . "</td>\n";
-									print "                  <td>" . $row['descriptions'] . "</td>\n";
-									print "                  <td><a href=\"editroom.php?room_id=" . $row['room_id'] . "\" \">Edit</a></td><td><a class=\"delete\" href=\"deleteroom.php?room_id=" . $row['room_id'] . "\">Delete</a></td></tr>";
+									print "<tr style=\"\">		 <td>" . $row['hotel_name'] . "</td>\n";
+									print "                  <td>" . $row2['district_name'] . "</td>\n";
+                                    print "                  <td>" . $row2['state_name'] . "</td>\n";
+									print "                  <td>" . $row['address'] . " </td>\n";
+									print "                  <td><a href=\"room.php?hotel_id=" . $row['hotel_id'] . "\" \">View Rooms</a></td></tr>";
 								}
 							}
 
@@ -155,7 +149,7 @@ if (mysqli_num_rows($re) > 0) {
 					</table>
 				</div>
 
-				<button type="button" class="btn" id="addroom">Add Room</button>
+				
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="formnew" style="display:none;">
 				<button type="button" class="btn" id="back">Back</button>
