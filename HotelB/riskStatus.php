@@ -1,8 +1,8 @@
-<?php 
+<?php
     include __DIR__ . '/auth.php';
     //$result = mysqli_query($dbhandle, "SELECT district_name, state_name FROM district ORDER BY state_name");
 ?>
-<?php 
+<?php
 $district_name = $_SESSION['district'];
 // $district_name = 'JASIN';
 // echo $district_name ."<br>";
@@ -29,8 +29,12 @@ $hotel_capacity = mysqli_query($dbhandle, "SELECT sum(occupancy * total_room) as
 
 
 require 'casesData.php';
-$active_cases = $district_FINAL[$district_name];
-// echo "active cases ". $active_cases  ."<br>";
+$active_cases = "";
+if (array_key_exists($district_name, $district_FINAL)) {
+    $active_cases = $district_FINAL[$district_name];
+} else {
+    $active_cases = 0;
+}
 $risk = (($active_cases / $population) * $hotel_capacity)*100;
 
 // echo round($risk, 2) ."%<br>";
