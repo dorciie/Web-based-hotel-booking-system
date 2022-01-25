@@ -34,11 +34,99 @@ session_start();
 		});
   });
 </script>
+
+<style>
+	/* @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+	button.small, .button.small{
+		font-family: 'Montserrat', sans-serif;
+	} */
+
+	/* Start Navigation Bar */
+
+.navbar {
+  background-color: #25283D;
+  color: #ffffff;
+  border-radius: 4px;
+  width: 100vw;
+  max-width: 820px;
+  margin: 20px auto 0;
+}
+
+.navbar .menu {
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 820px) {
+  .navbar .menu {
+    display: block;
+    position: relative;
+  }
+}
+
+.navbar .menu li {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+.navbar .menu a {
+  flex: 1;
+  justify-content: center;
+  display: inline-flex;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  position: relative;
+}
+
+.navbar .menu a > .fa {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.navbar .menu li:hover {
+  background-color: #4dc193;
+}
+
+.navbar .menu li:hover .container {
+  display: flex;
+}
+
+@media (max-width: 820px) {
+  .navbar .menu li:hover .container {
+    display: none;
+  }
+  
+  .fa-angle-down {
+    display: none;
+  }
+}
+
+/* End Navigation Bar */
+
+</style>
+
 <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 <meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large"><meta class="foundation-mq-medium"><meta class="foundation-mq-small"><style></style><meta class="foundation-mq-topbar"></head>
-<body class="fontbody" style="background-image : url(img/background.jpg); no-repeat center center fixed; background-size: cover;">
+<body class="fontbody" style="background-image : url('https://wallpapercave.com/wp/wp1846068.jpg'); no-repeat center center fixed; background-size: cover; overflow: hidden;">
+
+<!-- Start Navigation Bar -->
+<nav class="navbar">
+  <ul class="menu">
+    <li>
+      <a href="index.php">Hotel Booking Page</a>
+    </li>
+    <li>
+      <a href="admin/index.html">Admin Login</a>
+    </li>
+    <ul>
+</nav>
+<!-- End Navigation Bar -->
  
-<div class="row foo" style="margin:30px auto 30px auto;"><br><br>
+<div class="row foo"><br><br>
 <!--div class="large-12 columns">
 		<div class="large-3 columns centerdiv">
 			<a href="index.php" class="button round fontslabo" style="background-color:#2ecc71;">1</a>
@@ -61,8 +149,8 @@ session_start();
 </div>
 </div>
  
-<div class="row">
-	<div class="large-4 columns blackblur fontcolor" style="padding-top:10px;">
+<div class="row" style="max-width: 75rem; margin-left: 430px; ">
+	<div class="large-4 columns blackblur fontcolor" style="padding-top: 20px; padding-bottom:20px;">
 	
 	<div class="large-12 columns " >
 	<p><b>Check Date</b></p><hr class="line">
@@ -70,13 +158,13 @@ session_start();
 			<div class="row">
 				
 					<div class="large-6 columns" style="max-width:100%;">
-						<label class="fontcolor" for="checkin">Check In
+						<label class="fontcolor" style="margin-bottom:10px;" for="checkin">Check In
 							<input name="checkin" id="checkin" style="width:100%;"/>
 						</label>
 					</div>
 					
 					<div class="large-6 columns" style="max-width:100%;">
-						<label class="fontcolor" for="checkout">Check Out
+						<label class="fontcolor" style="margin-bottom:10px;" for="checkout">Check Out
 							<input name="checkout" id="checkout" style="width:100%;"/>
 						</label>
 					
@@ -87,7 +175,7 @@ session_start();
 			<div class="row">
 				
 					<div class="large-6 columns">
-						<label class="fontcolor">Adults
+						<label class="fontcolor" style="margin-bottom:10px;">Adults
 							
 								<select  name="totaladults" id="totaladults" style="width:100%;">
 								<option value="0">0</option>
@@ -107,7 +195,7 @@ session_start();
 					</div>
 					
 					<div class="large-6 columns"  style="max-width:100%;">
-						<label class="fontcolor">Children
+						<label class="fontcolor" style="margin-bottom:10px;">Children
 							<select  name="totalchildrens" id="totalchildrens" style="width:100%; color:black;">
 							<option value="0">0</option>
 							<option value="1">1</option>
@@ -127,7 +215,7 @@ session_start();
 
 					<div class="row">
             			<div class="large-12 columns">
-							<label class="fontcolor">District
+							<label class="fontcolor" style="margin-bottom:10px;">District
 									<select  name="district" id="district" style="width:100%;">
 									<?php 
 										$result = mysqli_query($dbhandle, "SELECT district_name, state_name FROM district ORDER BY state_name");
@@ -150,7 +238,7 @@ session_start();
 			
 			  <div class="row">
 				<div class="large-12 columns" >
-					<button name="submit" href="#" class="button small fontslabo" style="background-color:#2ecc71; width:100%;" >Check Availability</button>
+					<button name="submit" href="#" class="button small fontslabo" style="background-color:#2ecc71; width:100%; border-radius: 5px;" >Check Availability</button>
 				</div>
 			  </div>
 			</form>

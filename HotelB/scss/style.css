@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .circle{
 -webkit-border-radius: 90px;
@@ -19,7 +20,7 @@ text-align:center;
 
 
 body, label, href, h4{
-font-family: 'Slabo 13px', serif !important;
+font-family: 'Montserrat', sans-serif;
 font-weight: 400;
 color : white;
 }

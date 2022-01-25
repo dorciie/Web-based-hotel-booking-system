@@ -98,7 +98,7 @@ session_start();
 <nav class="navbar">
   <ul class="menu">
     <li>
-      <a href="checkroom.php">Booking Page</a>
+      <a href="index.php">Hotel Booking Page</a>
     </li>
     <li>
       <a href="contactus.php">Contact</a>
