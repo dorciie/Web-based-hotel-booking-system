@@ -20,24 +20,109 @@ session_start();
 <script src="jquery.backstretch.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 <meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large"><meta class="foundation-mq-medium"><meta class="foundation-mq-small"><style></style><meta class="foundation-mq-topbar"></head>
+<style>
+	body {
+
+		font-family: 'Montserrat', sans-serif;
+		background-image: url('https://textures.world/wp-content/uploads/2018/10/10-Smooth-Concrete-Background-Texture-copy.jpg');
+	}
+
+	/* Start Navigation Bar */
+
+.navbar {
+  background-color: #25283D;
+  color: #ffffff;
+  border-radius: 4px;
+  width: 100vw;
+  max-width: 820px;
+  margin: 20px auto 0;
+}
+
+.navbar .menu {
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 820px) {
+  .navbar .menu {
+    display: block;
+    position: relative;
+  }
+}
+
+.navbar .menu li {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+.navbar .menu a {
+  flex: 1;
+  justify-content: center;
+  display: inline-flex;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  position: relative;
+}
+
+.navbar .menu a > .fa {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.navbar .menu li:hover {
+  background-color: #4dc193;
+}
+
+.navbar .menu li:hover .container {
+  display: flex;
+}
+
+@media (max-width: 820px) {
+  .navbar .menu li:hover .container {
+    display: none;
+  }
+  
+  .fa-angle-down {
+    display: none;
+  }
+}
+
+/* End Navigation Bar */
+</style>
+
 <body class="fontbody" >
+	<!-- Start Navigation Bar -->
+<nav class="navbar">
+  <ul class="menu">
+    <li>
+      <a href="checkroom.php">Booking Page</a>
+    </li>
+    <li>
+      <a href="contactus.php">Contact</a>
+    </li>
+    <ul>
+</nav>
+<!-- End Navigation Bar -->
 <div class="row foo" style="margin:30px auto 30px auto;" >
 <div class="large-12 columns">
 		<div class="large-3 columns centerdiv">
 			<a href="sessiondestroy.php" class="button round blackblur fontslabo" >1</a>
-			<p class="fontgrey">Please select Date</p>
+			<p class="fontblack">Please select Date</p>
 		</div>
 		<div class="large-3 columns centerdiv">
 			<a href="unsetroomchosen.php" class="button round blackblur fontslabo" >2</a>
-			<p class="fontgrey">Select Room</p>
+			<p class="fontblack">Select Room</p>
 		</div>
 		<div class="large-3 columns centerdiv">
 			<a href="guestform.php" class="button round  blackblur fontslabo" >3</a>
-			<p class="fontgrey">Guest Details</p>
+			<p class="fontblack">Guest Details</p>
 		</div>
 		<div class="large-3 columns centerdiv">
 			<a href="#" class="button round fontslabo" style="background-color:#2ecc71;">4</a>
-			<p class="fontgrey">Reservation Complete</p>
+			<p class="fontblack">Reservation Complete</p>
 		</div>
 </div>
 
@@ -173,7 +258,7 @@ session_start();
 				
 				  <div class="row">
 					<div class="large-12 columns" >
-						<button name="submit" href="#" class="button small fontslabo" style="background-color:#2ecc71; width:100%;">Edit Reservation</button>
+						<button name="submit" href="#" class="button small fontslabo" style="background-color:#2ecc71; width:100%; border-radius: 10px;">Edit Reservation</button>
 					</div>
 				  </div>
 				</form>
@@ -222,7 +307,7 @@ session_start();
 					<input type="hidden" name="custom" value="<? echo $_SESSION['booking_id'];?>">
 					<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
 					<img type="image" src="img/paypal.jpg" style="background-color:white; width:32%; height:14%; padding:2px; " ></img>
-					<br><button class="button small " border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width:32%;background-color:#2ecc71; ">Pay Room Deposit Now</button>
+					<br><button class="button small " border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width:32%;background-color:#2ecc71; border-radius: 10px; margin-top:10px; ">Pay Room Deposit Now</button>
 					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 					</form>
 

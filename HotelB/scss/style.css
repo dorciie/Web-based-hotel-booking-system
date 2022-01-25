@@ -9,14 +9,14 @@ border-radius: 90px;
  background-color: #000000;
 background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png);
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+border-radius: 10px;
 }
 
 .centerdiv{
 text-align:center;
-}
-html{
 
 }
+
 
 body, label, href, h4{
 font-family: 'Slabo 13px', serif !important;
@@ -37,6 +37,10 @@ color : #95A5A6;
 .fontgreysmall{
 color : #95A5A6;
 font-size : 13px;
+}
+
+.fontblack{
+    color: #000000;
 }
 
 .borderstyle{

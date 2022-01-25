@@ -1,212 +1,82 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=">
-  <title>Reservation</title>
-  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservation</title>
+<meta name="reservation hotel for malaysia">
+<meta name="zulkarnain" content="gambohnetwork.com.my">
+<meta name="copyright" content="Hotel Malaysia, inc. Copyright (c) 2014">
+<link rel="stylesheet" href="contactus.css">
+<link href='http://fonts.googleapis.com/css?family=Slabo+13px' rel='stylesheet' type='text/css'>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<meta class="foundation-data-attribute-namespace">
+<meta class="foundation-mq-xxlarge">
+<meta class="foundation-mq-xlarge">
+<meta class="foundation-mq-large">
+<meta class="foundation-mq-medium">
+<meta class="foundation-mq-small">
 
-  <style>
-  body {
-    /* background: #f2f2f2; */
-    background-image: url(https://wallpapercave.com/wp/wp1846069.jpg);
-    font-family: 'proxima-nova-soft', sans-serif;
-    font-size: 14px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .post-module {
-    position: relative;
-    z-index: 1;
-    display: block;
-    background: #ffffff;
-    min-width: 270px;
-    height: 470px;
-    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-    -webkit-transition: all 0.3s linear 0s;
-    -moz-transition: all 0.3s linear 0s;
-    -ms-transition: all 0.3s linear 0s;
-    -o-transition: all 0.3s linear 0s;
-    transition: all 0.3s linear 0s;
-    border-radius: 5px;
-  }
-  .post-module:hover,
-  .hover {
-    -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-  }
-  .post-module:hover .thumbnail img,
-  .hover .thumbnail img {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity: .6;
-  }
-  .post-module .thumbnail {
-    background: #000000;
-    height: 400px;
-    overflow: hidden;
-  }
-
-  .post-module .thumbnail img {
-    display: block;
-    width: 120%;
-    -webkit-transition: all 0.3s linear 0s;
-    -moz-transition: all 0.3s linear 0s;
-    -ms-transition: all 0.3s linear 0s;
-    -o-transition: all 0.3s linear 0s;
-    transition: all 0.3s linear 0s;
-  }
-  .post-module .post-content {
-    position: absolute;
-    bottom: 0;
-    background: #ffffff;
-    width: 100%;
-    padding: 30px;
-    -webkti-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-    -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-    -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-    -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-    border-radius: 5px;
-  }
-  .post-module .post-content .category {
-    position: absolute;
-    top: -34px;
-    left: 0;
-    background: #4dc193;
-    padding: 10px 15px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  .post-module .post-content .title {
-    margin: 0;
-    padding: 0 0 10px;
-    color: #333333;
-    font-size: 26px;
-    font-weight: 700;
-  }
-  .post-module .post-content .sub_title {
-    margin: 0;
-    padding: 0 0 20px;
-    color: #e74c3c;
-    font-size: 20px;
-    font-weight: 400;
-  }
-  .post-module .post-content .description {
-    display: none;
-    color: #666666;
-    font-size: 14px;
-    line-height: 1.8em;
-  }
-  .post-module .post-content .post-meta {
-    margin: 30px 0 0;
-    color: #999999;
-  }
-
-  .post-module .post-content .post-meta a {
-    color: #999999;
-    text-decoration: none;
-  }
-
-  .container {
-    max-width: 800px;
-    min-width: 640px;
-    margin: 0 auto;
-    border-radius: 5px;
-  }
-  .container:before,
-  .container:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  .container .column {
-    width: 50%;
-    padding: 0 25px;
-    -webkti-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    float: left;
-  }
-  .container .column .demo-title {
-    margin: 0 0 15px;
-    color: #666666;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .container .info {
-    width: 300px;
-    margin: 50px auto;
-    text-align: center;
-  }
-  .container .info h1 {
-    margin: 0 0 15px;
-    padding: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333333;
-  }
-  .container .info span {
-    color: #666666;
-    font-size: 12px;
-  }
-  .container .info span a {
-    color: #000000;
-    text-decoration: none;
-  }
-  .container .info span .fa {
-    color: #e74c3c;
-  }
-
-  </style>
-  <script>
-    $(window).load(function() {
-      $('.post-module').hover(function() {
-        $(this).find('.description').stop().animate({
-          height: "toggle",
-          opacity: "toggle"
-        }, 300);
-      });
-    });
-  </script>
-
-
-</head>
 <body>
-  <div class="container">
-      <div class="info">
-          <h1>Contact Us </h1>
-      <!-- Normal Demo-->
-        <div class="column">
-          <!-- Post-->
-          <div class="post-module">
-              <!-- Thumbnail-->
-              <!-- <div class="thumbnail">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div> -->
-              <!-- Post Content-->
-              <div class="post-content">
-                  <div class="category">Hotel Contact Details</div>
-                  <h1 class="title">Hotel Name</h1>
-                  <p class="address">Address</p>
-                  <p class="phone">Phone Number</p>
-              </div>
-          </div>
-        </div>
-      
-      
-      </div>
-  </div>
+  <!-- Start Navigation Bar -->
+<nav class="navbar">
+  <ul class="menu">
+    <li>
+      <a href="checkroom.php">Booking Page</a>
+    </li>
+    <li>
+      <a href="contactus.php">Contact</a>
+    </li>
+    <ul>
+</nav>
+<!-- End Navigation Bar -->
+<?php
+          include __DIR__ . '/auth.php';
+          $result = mysqli_query($dbhandle, "select * from hotel");
 
+          if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+          ?>
+  <div>
+  <div class="contactCard">
+    <!-- <div class="container"> -->
+      <div class="nameContainer">
+        <div class="line">
+          <h20><?php echo $row['hotel_name']; ?></h20>
+        </div>
+      </div>
+      <div class="infoContainer">
+        <div class="line">
+          <div class="icon">
+            <svg class="icon-home" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z"></path>
+            </svg>
+          </div>
+          <p><?php echo $row['address']; ?></p>
+        </div>
+        <div class="line">
+          <div class="icon">
+            <svg class="icon-phone" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+            </svg>
+          </div>
+          <p><?php echo $row['contact_num']; ?></p>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>  
+            </div>
+  <?php
+            }
+          } else {
+            echo "0 results";
+          }
+          ?>
 </body>
+
 </html>

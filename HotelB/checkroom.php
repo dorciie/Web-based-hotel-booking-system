@@ -21,8 +21,6 @@ if (isset($_POST["totaladults"])) {
 if (isset($_POST["totalchildrens"])) {
 	$_SESSION['childrens'] = $_POST["totalchildrens"];
 }
-
-
 ?>
 <!DOCTYPE html>
 <meta charset="utf-8">
@@ -44,28 +42,124 @@ if (isset($_POST["totalchildrens"])) {
 <meta class="foundation-mq-large">
 <meta class="foundation-mq-medium">
 <meta class="foundation-mq-small">
-<style></style>
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Montserrat);
+* {
+	box-sizing: border-box;
+}
+body {
+  /* background: #dddddd; */
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('https://textures.world/wp-content/uploads/2018/10/10-Smooth-Concrete-Background-Texture-copy.jpg');
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  
+
+}
+
+/* Start Navigation Bar */
+
+.navbar {
+  background-color: #25283D;
+  color: #ffffff;
+  border-radius: 4px;
+  width: 100vw;
+  max-width: 820px;
+  margin: 20px auto 0;
+}
+
+.navbar .menu {
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 820px) {
+  .navbar .menu {
+    display: block;
+    position: relative;
+  }
+}
+
+.navbar .menu li {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+.navbar .menu a {
+  flex: 1;
+  justify-content: center;
+  display: inline-flex;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  position: relative;
+}
+
+.navbar .menu a > .fa {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.navbar .menu li:hover {
+  background-color: #4dc193;
+}
+
+.navbar .menu li:hover .container {
+  display: flex;
+}
+
+@media (max-width: 820px) {
+  .navbar .menu li:hover .container {
+    display: none;
+  }
+  
+  .fa-angle-down {
+    display: none;
+  }
+}
+
+/* End Navigation Bar */
+
+</style>
+
+
 <meta class="foundation-mq-topbar">
 </head>
 
 <body class="fontbody">
+<!-- Start Navigation Bar -->
+<nav class="navbar">
+  <ul class="menu">
+    <li>
+      <a href="checkroom.php">Booking Page</a>
+    </li>
+    <li>
+      <a href="contactus.php">Contact</a>
+    </li>
+    <ul>
+</nav>
+<!-- End Navigation Bar -->
+
 	<div class="row foo" style="margin:30px auto 30px auto;">
 		<div class="large-12 columns">
 			<div class="large-3 columns centerdiv">
 				<a href="sessiondestroy.php" class="button round blackblur fontslabo">1</a>
-				<p class="fontgrey">Please select Date</p>
+				<p class="fontblack">Please select Date</p>
 			</div>
 			<div class="large-3 columns centerdiv">
 				<a href="#" class="button round fontslabo" style="background-color:#2ecc71;">2</a>
-				<p class="fontgrey">Select Room</p>
+				<p class="fontblack">Select Room</p>
 			</div>
 			<div class="large-3 columns centerdiv">
 				<a href="#" class="button round blackblur fontslabo">3</a>
-				<p class="fontgrey">Guest Details</p>
+				<p class="fontblack">Guest Details</p>
 			</div>
 			<div class="large-3 columns centerdiv">
 				<a href="#" class="button round blackblur fontslabo">4</a>
-				<p class="fontgrey">Reservation Complete</p>
+				<p class="fontblack">Reservation Complete</p>
 			</div>
 		</div>
 
@@ -185,8 +279,8 @@ if (isset($_POST["totalchildrens"])) {
 				}
 
 				?>
-					<div class="card" style="background-color:<?php echo $colour ?>">
-					 	<div class="card-body" style="padding: 20px; text-align:center; font-size:30px; ">
+					<div class="card" style="border-radius: 10px; background-color:<?php echo $colour ?>">
+					 	<div class="card-body" style="padding: 20px; text-align:center; font-size:30px;">
 						 <?php echo $zone ?>
 					 	</div>
 					</div>
@@ -202,14 +296,14 @@ if (isset($_POST["totalchildrens"])) {
 				
 					<div class="row">
 						<div class="large-12 columns">
-							<br><button name="submit" href="#" class="button small fontslabo" style="background-color:#2ecc71; width:100%;">Edit Reservation</button>
+							<br><button name="submit" href="#" class="button small fontslabo" style="background-color:#2ecc71; width:100%; border-radius: 10px;">Edit Reservation</button>
 						</div>
 					</div>
 				</form>
 			</div>
 			<div class="large-12 columns" id="roomselected" style="display:none;">
 				<hr>
-				<br><label for="submit-form" class="book button small fontslabo" style="background-color:#2ecc71; width:100%; height:45px; !important;">Proceed To Book</label>
+				<br><label for="submit-form" class="book button small fontslabo" style="background-color:#2ecc71; width:100%; height:45px; !important; border-radius: 10px;">Proceed To Book</label>
 				<!--button name="submit" href="#" class="button small fontslabo" style="background-color:#2ecc71; width:100%;" >Proceed Booking</button-->
 
 			</div>
