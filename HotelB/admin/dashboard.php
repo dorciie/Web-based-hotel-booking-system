@@ -127,7 +127,7 @@ if (mysqli_num_rows($re) > 0) {
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="signout.php" style="color: #ffffff;">Sign Out</a></li>
+					<li><a href="/" style="color: #ffffff;">Sign Out</a></li>
 				</ul>
 			</div>
 		</div>
@@ -141,7 +141,7 @@ if (mysqli_num_rows($re) > 0) {
 
 					<li><a href="hotellist.php"><i class="icon-key"></i> Hotels</a></li>
 
-					<li><a href="http://www.hotel.gamboh.com.my"><i class="icon-share"></i> Booking Page</a></li>
+					<!-- <li><a href="http://www.hotel.gamboh.com.my"><i class="icon-share"></i> Booking Page</a></li> -->
 				</ul>
 
 			</div>

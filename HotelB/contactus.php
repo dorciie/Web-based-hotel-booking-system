@@ -1,4 +1,8 @@
-
+<?php 
+session_start();
+$hotel_id = $_SESSION['hotel_id'];
+// echo $hotel_id;
+?>
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,8 +38,7 @@
 <!-- End Navigation Bar -->
 <?php
           include __DIR__ . '/auth.php';
-          $result = mysqli_query($dbhandle, "select * from hotel");
-
+          $result = mysqli_query($dbhandle, "select * from hotel where hotel_id = '".$hotel_id."'");
           if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {

@@ -19,7 +19,8 @@ include __DIR__ . '/auth.php';
 mysqli_query($dbhandle, "INSERT INTO booking (booking_id, total_adult, total_children, checkin_date, checkout_date, special_requirement, payment_status, total_amount, deposit, first_name, last_name, email, telephone_no, add_line1, add_line2, city, state, postcode, country) 
 VALUES (NULL, '" . $_SESSION['adults'] . "' , '" . $_SESSION['childrens'] . "', '" . $_SESSION['checkin_db'] . "', '" . $_SESSION['checkout_db'] . "', '" . $_SESSION['special_requirement'] . "', 'pending', '" . $_SESSION['total_amount'] . "', '" . $_SESSION['deposit'] . "', '" . $_SESSION['firstname'] . "', '" . $_SESSION['lastname'] . "', '" . $_SESSION['email'] . "', '" . $_SESSION['phone'] . "', '" . $_SESSION['addressline1'] . "', '" . $_SESSION['addressline2'] . "', '" . $_SESSION['city'] . "', '" . $_SESSION['state'] . "', '" . $_SESSION['postcode'] . "', '" . $_SESSION['country'] . "')");
 echo mysqli_error($dbhandle);
-$_SESSION['booking_id'] = mysqli_insert_id();
+$_SESSION['booking_id'] = mysqli_insert_id($dbhandle);
+echo "session".$_SESSION['booking_id'];
 $count = 0;
 foreach ($_SESSION['room_id'] as &$value0) {
 

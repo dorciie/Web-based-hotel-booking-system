@@ -149,7 +149,7 @@ session_start();
 </div>
 </div>
  
-<div class="row" style="max-width: 75rem; margin-left: 430px; ">
+<div class="row" style="max-width: 75rem; margin-left: 500px; ">
 	<div class="large-4 columns blackblur fontcolor" style="padding-top: 20px; padding-bottom:20px;">
 	
 	<div class="large-12 columns " >

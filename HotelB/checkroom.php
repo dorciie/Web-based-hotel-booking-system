@@ -286,6 +286,8 @@ body {
 					</div>
 
 					<?php require 'riskStatus.php';
+					$_SESSION['hotel_id'] = $hotel_id;
+					// echo $hotel_id;
 					echo "<br>";
 					echo round($risk, 2) ."%<br>";
 					echo round($risk, 0) ." out of 100 people are at risk of getting COVID";
@@ -337,7 +339,7 @@ body {
 										)
 										as br
 					 
-					 ON r.room_id = br.room_id");
+					 ON r.room_id = br.room_id WHERE r.hotel_id = " . $hotel_id );
 				echo mysqli_error($dbhandle);
 				if (mysqli_num_rows($result) > 0) {
 					echo "<p><b>Choose Your Room</b></p><hr class=\"line\">";

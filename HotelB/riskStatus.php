@@ -32,6 +32,7 @@ require 'casesData.php';
 $active_cases = "";
 if (array_key_exists($district_name, $district_FINAL)) {
     $active_cases = $district_FINAL[$district_name];
+    // echo "active_cases ". $active_cases ."<br>";
 } else {
     $active_cases = 0;
 }
